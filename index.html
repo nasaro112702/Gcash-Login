@@ -18,17 +18,20 @@
 
         .top-color {
             background-color: #0056E4;
-            height: 25vh; /* Set the height of the top color */
+            height: 27vh; /* Set the height of the top color */
             color: #fff; /* Set text color to white for better readability */
         }
 
-        /* Floating div with shadow */
+        /* Floating div with shadow and rounded corners */
         .floating-div {
-            width: 80%;
-            margin: 20px auto;
+            width: 90%;
+            margin: -19vh auto 20px; /* Adjust margin to overlap */
             background-color: #fff;
-            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+            padding: 1px;
+            border-radius: 5px; /* Add rounded corners */
+            position: relative; /* Add position relative */
+            z-index: 1; /* Set a higher z-index to make it appear above the top-color div */
         }
 
         /* Optional: Add additional styling for your content */
@@ -36,18 +39,48 @@
             padding: 20px;
             text-align: center;
         }
+
+        .float-top-color {
+            background-color: #EBECF0;
+            height: 15vh;
+            position: relative;
+        }
+
+        .float-bottom-color {
+            background-color: white;
+            height: 30vh;
+            position: relative;
+        }
+
+        /* Centered image at the outside top of the floating div */
+        .top-image {
+            position: absolute;
+            top: 4%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 
 <body>
     <div class="top-color">
-        
+        <img class="top-image" src="images/GCash_logo.white.png" alt="Centered Image">
     </div>
 
     <div class="floating-div">
-        <!-- Your content inside the floating div with shadow -->
-        <h2>Floating Div with Shadow</h2>
-        <p>This is a floating div with a shadow.</p>
+        <div class="float-top-color">
+            <!-- Centered image at the outside top of the floating div -->
+            
+        </div>
+        <div class="float-bottom-color">
+            <!-- Text at the outside bottom of the floating div -->
+            
+        </div>
+    </div>
+    <div class="bottom-text">
+        <p>Don't have a Gcash account? </p><a href="">Register now</a>
     </div>
 
     <script src="node_modules/@popperjs/core/dist/esm/popper.js"></script>
