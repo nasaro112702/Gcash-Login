@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gcash Login to Pay</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gcash Login to Pay</title>
 
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #EBECF0;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Optional: Set a font for better compatibility */
+        }
+
+        .top-color {
+            background-color: #0056E4;
+            height: 25vh; /* Set the height of the top color */
+            color: #fff; /* Set text color to white for better readability */
+        }
+
+        /* Floating div with shadow */
+        .floating-div {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        /* Optional: Add additional styling for your content */
+        .container-fluid {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-color">
         
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    </div>
 
-        <style>
-            body {
-                background-color: #0056E4;
-                color: #fff; /* Set text color to white for better readability */
-            }
-        </style>
-    </head>
+    <div class="floating-div">
+        <!-- Your content inside the floating div with shadow -->
+        <h2>Floating Div with Shadow</h2>
+        <p>This is a floating div with a shadow.</p>
+    </div>
 
-    <body>
-        <div class="container-fluid">
-            <h1>Hello There</h1>
-        </div>
+    <script src="node_modules/@popperjs/core/dist/esm/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-        
-        <script src="node_modules/@popperjs/core/dist/esm/popper.js"></script> 
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        
-        <script>
-            // Your custom scripts go here
-        </script>
-    </body>
+    <script>
+        // Your custom scripts go here
+    </script>
+</body>
 
 </html>
