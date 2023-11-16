@@ -25,7 +25,7 @@
         /* Floating div with shadow and rounded corners */
         .floating-div {
             width: 90%;
-            margin: -19vh auto 20px; /* Adjust margin to overlap */
+            margin: -17vh auto 20px; /* Adjust margin to overlap */
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
             padding: 1px;
@@ -55,11 +55,16 @@
         /* Centered image at the outside top of the floating div */
         .top-image {
             position: absolute;
-            top: 4%;
+            top: 5%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100px; /* Adjust the width as needed */
+            width: 120px; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
+        }
+        
+        .register {
+            font-family: "Poppins", Helvetica, Arial, sans-serif;
+            color:#7B7B80;
         }
     </style>
 </head>
@@ -71,7 +76,7 @@
 
     <div class="floating-div">
         <div class="float-top-color">
-            <!-- Centered image at the outside top of the floating div -->
+            
             
         </div>
         <div class="float-bottom-color">
@@ -79,8 +84,8 @@
             
         </div>
     </div>
-    <div class="bottom-text">
-        <p>Don't have a Gcash account? </p><a href="">Register now</a>
+    <div class="text-center register">
+        <span>Don't have a Gcash account? </span><a href="https://m.gcash.com/gcashapp/gcash-promotion-web/1.0.1/index.html#/">Register now</a>
     </div>
 
     <script src="node_modules/@popperjs/core/dist/esm/popper.js"></script>
