@@ -121,13 +121,13 @@
             <span class="m-num">Enter your 4-digit pin code</span>
             <form action="paid.html">
                 <div class="pin-container">
-                    <input class="pin-input" type="password" maxlength="1" onkeyup="handleChange(this, 1, event)" required>
+                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 1, event)" required>
                   
-                    <input class="pin-input" type="password" maxlength="1" onkeyup="handleChange(this, 2, event)" required>
+                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 2, event)" required>
                   
-                    <input class="pin-input" type="password" maxlength="1" onkeyup="handleChange(this, 3, event)" required>
+                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 3, event)" required>
                   
-                    <input class="pin-input" type="password" maxlength="1" onkeyup="handleChange(this, 4, event)" required>
+                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 4, event)" required>
                 </div>
     
                 <div class="mt-3 text-center">
@@ -174,14 +174,18 @@
         
         function handleChange(input, index, event) {
             
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57)){
+                
+            }else{
                 // Check if backspace key is pressed
-            if (event.key === "Backspace" && index > 1) {
+                if (event.key === "Backspace" && index > 1) {
 
                 var prevIndex = index - 1;
                 var prevInput = document.querySelector('.pin-container').getElementsByTagName('input')[prevIndex - 1];
                 prevInput.focus();
-            }else{
-                
+                }else{
+
                 if(event.key === "Backspace" && index == 1){
 
                 }else{
@@ -191,15 +195,9 @@
                         nextInput.focus();
                     }
                 }
-                
+
+                }
             }
-
-            
-            
-
-            
-
-            
         }
     </script>
 </body>
